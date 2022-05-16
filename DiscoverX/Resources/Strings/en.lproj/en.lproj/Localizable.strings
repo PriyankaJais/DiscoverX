@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  DiscoverX
+
+  Created by Priyanka Jaiswal on 16/05/2022.
+  
+*/
+
+"ParsingErrorMessage" = "could not decode data";
+"EmptyDataErrorMessage" = "received empty data";
+"MissionTitle" = "Mission:";
+"DateTitle" = "Date/time:";
+"RocketTitle" = "Rocket:";
+"DaysFromNowTitle" = "Days From Now:";
+"DaysSinceNowTitle" = "Days Since Now:";
+"HomeTitle" = "DiscoverX";
+"CompanyTitle" = "COMPANY";
+"LaunchesTitle" = "LAUNCHES";
+"CompanyInfoTextFormat" = "%@ was founded by %@ in %@. It has now %d employees, %d launch sites, and is valued at USD %@";
+"FiltersTitle" = "Filter Launches";
+"ShowOnlySuccessfulLaunches" = "Show only successful launches";
+"SortByAscending" = "Sort by Ascending Order";
+"SortByDescending" = "Sort by Descending Order";
+"ErrorMessage" = "Something went wrong. Please try again later";
+"PullToRefresh" = "Pull to refresh";
+"ContextMenuTitle" = "Useful links";
+"OpenArticleTitle" = "Go to article";
+"OpenVideoTitle" = "Watch on Youtube";
+"OpenWikipediaTitle" = "Go to Wiki page";
+"ClearFiltersTitle" = "Clear filters";
