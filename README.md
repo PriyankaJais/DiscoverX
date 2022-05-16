@@ -5,6 +5,7 @@ DiscoverX is an app to explore SpaceX launches.
 It fetches a list of launches and company information using SpaceX APIs.
 
 It is built using Swift 5 and Xcode 13.3.1
+
 It has a filter screen which has options to filter for only successful launches, filter by launch years
 and to sort by ascending/descending order of launch years.
 
