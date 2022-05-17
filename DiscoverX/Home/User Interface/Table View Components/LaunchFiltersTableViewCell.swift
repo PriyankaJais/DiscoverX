@@ -23,10 +23,6 @@ class LaunchFiltersTableViewCell: UITableViewCell {
     }
     
     func updateState() {
-        if accessoryType == .checkmark {
-            accessoryType = .none
-        } else {
-            accessoryType = .checkmark
-        }
+        accessoryType = accessoryType == .checkmark ? .none : .checkmark
     }
 }

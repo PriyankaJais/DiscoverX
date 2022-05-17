@@ -65,7 +65,7 @@
 /* Begin PBXFileReference section */
 		901B4221282E97FA000A4DF6 /* launches-incorrect-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "launches-incorrect-response.json"; sourceTree = "<group>"; };
 		901B4224282EB90F000A4DF6 /* CompanyInfoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoViewModelTests.swift; sourceTree = "<group>"; };
-		901B4226282EB92C000A4DF6 /* CompanyInfoServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoServiceMock.swift; sourceTree = "<group>"; };
+		901B4226282EB92C000A4DF6 /* CompanyInfoServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyInfoServiceMock.swift; path = ../CompanyInfoServiceMock.swift; sourceTree = "<group>"; };
 		901B4228282EBA7A000A4DF6 /* company-info-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "company-info-response.json"; sourceTree = "<group>"; };
 		901B422A282EBAC9000A4DF6 /* company-info-incorrect-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "company-info-incorrect-response.json"; sourceTree = "<group>"; };
 		901B422C283246F0000A4DF6 /* LaunchFiltersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFiltersViewModelTests.swift; sourceTree = "<group>"; };
@@ -188,11 +188,10 @@
 		90B1E322282AA90100E3C69B /* DiscoverXTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD9230EC2833A8D3000C87F9 /* Mocks */,
 				901B4223282EA2CD000A4DF6 /* Response jsons */,
 				90B1E387282D590800E3C69B /* LaunchListViewModelTests.swift */,
-				90B1E389282D59D800E3C69B /* LaunchesServiceMock.swift */,
 				901B4224282EB90F000A4DF6 /* CompanyInfoViewModelTests.swift */,
-				901B4226282EB92C000A4DF6 /* CompanyInfoServiceMock.swift */,
 				901B422C283246F0000A4DF6 /* LaunchFiltersViewModelTests.swift */,
 			);
 			path = DiscoverXTests;
@@ -315,6 +314,15 @@
 				90B1E37E282D0FA500E3C69B /* LaunchFiltersViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DD9230EC2833A8D3000C87F9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				90B1E389282D59D800E3C69B /* LaunchesServiceMock.swift */,
+				901B4226282EB92C000A4DF6 /* CompanyInfoServiceMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

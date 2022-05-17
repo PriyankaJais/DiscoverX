@@ -18,10 +18,6 @@ struct Launch: Decodable {
     let articleLink: String?
     let wikipediaLink: String?
     
-    var missionStatus: Bool {
-        return success ?? false
-    }
-    
     var launchDateString: String {
         launchDate.changeTo(format: "dd-MM-YYYY 'at' HH:mm")
     }

@@ -60,11 +60,17 @@ extension LaunchFiltersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? LaunchFiltersTableViewCell,
               let launchFilter = launchFiltersViewModel?.filters[indexPath.row] else { return }
-        updateSelectedFilters(with: launchFilter)
-        cell.updateState()
+        updateSelectedFilters(with: launchFilter, cell: cell)
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? LaunchFiltersTableViewCell,
+              let launchFilter = launchFiltersViewModel?.filters[indexPath.row] else { return }
+        updateSelectedFilters(with: launchFilter, cell: cell)
     }
 
-    private func updateSelectedFilters(with filter: Filter) {
+    private func updateSelectedFilters(with filter: Filter, cell: LaunchFiltersTableViewCell) {
+        cell.updateState()
         if let index = selectedFilters.firstIndex(where: { $0 == filter }) {
             selectedFilters.remove(at: index)
             return
@@ -72,3 +78,4 @@ extension LaunchFiltersViewController: UITableViewDelegate {
         selectedFilters.append(filter)
     }
 }
+

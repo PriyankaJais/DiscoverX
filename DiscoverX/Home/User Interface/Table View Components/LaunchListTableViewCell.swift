@@ -40,7 +40,9 @@ class LaunchListTableViewCell: UITableViewCell {
         imageDownloadRequest = imageDownloader.get(for: launch.missionImageUrl) { [weak self] image in
             self?.missionImageView?.image = image
         }
-        successImageView?.image = launch.missionStatus ? UIImage(systemName: "checkmark") : UIImage(systemName: "xmark")
+        if let missionStatus = launch.success {
+            successImageView?.image = missionStatus ? UIImage(systemName: "checkmark") : UIImage(systemName: "xmark")
+        } 
         
         missionNameTitleLabel?.attributedText = NSAttributedString(string: Translations.missionTitle, attributes: [.font: StyleGuide.title.font])
         dateTitleLabel?.attributedText = NSAttributedString(string: Translations.dateTitle, attributes: [.font: StyleGuide.title.font])

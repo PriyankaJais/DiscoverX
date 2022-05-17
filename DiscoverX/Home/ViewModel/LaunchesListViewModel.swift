@@ -50,7 +50,7 @@ class LaunchesListViewModel {
         var filteredBySuccess: Launches = showinglaunches
         
         if filters.contains(where: { $0.filterType == .success}) {
-            filteredBySuccess = showinglaunches.filter{ $0.missionStatus }
+            filteredBySuccess = showinglaunches.filter{ $0.success ?? false }
         }
         
         let yearFilters = filters.filter{ $0.filterType == .years }

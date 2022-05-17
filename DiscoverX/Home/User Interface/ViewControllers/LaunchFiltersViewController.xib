@@ -32,9 +32,8 @@
                         <action selector="clearButtonTapped:" destination="-1" eventType="touchUpInside" id="qMe-d3-1Jj"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Oz3-ng-N4R">
-                    <rect key="frame" x="0.0" y="80" width="414" height="714"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oz3-ng-N4R">
+                    <rect key="frame" x="0.0" y="80" width="414" height="782"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="las-ww-LrI"/>
@@ -45,9 +44,12 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Oz3-ng-N4R" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="50r-FI-GKZ"/>
                 <constraint firstItem="ddG-nc-WA2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="5NG-Zi-bPZ"/>
                 <constraint firstAttribute="trailing" secondItem="ddG-nc-WA2" secondAttribute="trailing" constant="20" id="95i-eY-gmC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Oz3-ng-N4R" secondAttribute="bottom" id="C9l-SY-wkg"/>
                 <constraint firstItem="Oz3-ng-N4R" firstAttribute="top" secondItem="ddG-nc-WA2" secondAttribute="bottom" constant="20" id="U5u-ya-JaF"/>
+                <constraint firstItem="Oz3-ng-N4R" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vaF-Pc-AdI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
