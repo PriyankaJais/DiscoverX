@@ -10,7 +10,7 @@ import XCTest
 
 class CompanyInfoViewModelTests: XCTestCase {
     
-    var mockedNetworkService: CompanyInfoServiceMock!
+    var mockedNetworkService: NetworkServiceMock!
     var companyInfoViewModel: CompanyInfoViewModel!
     
     override func tearDown() {
@@ -20,7 +20,7 @@ class CompanyInfoViewModelTests: XCTestCase {
     
     func testSuccessCase() {
         let successTestExpectation = expectation(description: "Successful Response Test Expectation")
-        mockedNetworkService = CompanyInfoServiceMock(fileName: "company-info-response")
+        mockedNetworkService = NetworkServiceMock(fileName: "company-info-response")
         companyInfoViewModel = CompanyInfoViewModel(networkService: mockedNetworkService)
         companyInfoViewModel.getCompanyInfo { success in
             successTestExpectation.fulfill()
@@ -33,7 +33,7 @@ class CompanyInfoViewModelTests: XCTestCase {
     
     func testFailureCase() {
         let failureTestExpectation = expectation(description: "Failed Response Test Expectation")
-        mockedNetworkService = CompanyInfoServiceMock(fileName: "company-info-incorrect-response")
+        mockedNetworkService = NetworkServiceMock(fileName: "company-info-incorrect-response")
         companyInfoViewModel = CompanyInfoViewModel(networkService: mockedNetworkService)
         companyInfoViewModel.getCompanyInfo { success in
             failureTestExpectation.fulfill()

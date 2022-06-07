@@ -11,14 +11,14 @@ class CompanyInfoViewModel {
     
     var companyInfo: CompanyInfo?
     
-    private let networkService: CompanyInfoNetworkServiceProtocol
+    private let networkService: NetworkServiceProtocol
     
-    init(networkService: CompanyInfoNetworkServiceProtocol = CompanyInfoNetworkService()) {
+    init(networkService: NetworkServiceProtocol = NetworkService()) {
         self.networkService = networkService
     }
     
     func getCompanyInfo(completion: @escaping ((Bool) -> Void)) {
-        networkService.fetchCompanyInfo { [weak self] result in
+        networkService.fetchData(url: APIEndpoints.companyInfo().url) { [weak self] (result : Result<CompanyInfo, ErrorResult>) in
             switch result {
             case .success(let companyInfo) :
                 self?.companyInfo = companyInfo

@@ -10,7 +10,7 @@ import XCTest
 
 class LaunchListViewModelTests: XCTestCase {
 
-    var mockedLaunchesNetworkService: LaunchesNetworkServiceProtocol!
+    var mockedLaunchesNetworkService: NetworkServiceProtocol!
     var launchesViewModel: LaunchesListViewModel!
 
     override func tearDown() {
@@ -20,7 +20,7 @@ class LaunchListViewModelTests: XCTestCase {
     
     func testSuccessCase() {
         let successTestExpectation = expectation(description: "Successful Response Test Expectation")
-        mockedLaunchesNetworkService = LaunchesServiceMock(fileName: "launches-response")
+        mockedLaunchesNetworkService = NetworkServiceMock(fileName: "launches-response")
         launchesViewModel = LaunchesListViewModel(networkService: mockedLaunchesNetworkService)
         launchesViewModel.getLaunches { success in
             successTestExpectation.fulfill()
@@ -33,7 +33,7 @@ class LaunchListViewModelTests: XCTestCase {
     
     func testFailureCase() {
         let failureTestExpectation = expectation(description: "Failed Response Test Expectation")
-        mockedLaunchesNetworkService = LaunchesServiceMock(fileName: "launches-incorrect-response")
+        mockedLaunchesNetworkService = NetworkServiceMock(fileName: "launches-incorrect-response")
         launchesViewModel = LaunchesListViewModel(networkService: mockedLaunchesNetworkService)
         launchesViewModel.getLaunches { success in
             failureTestExpectation.fulfill()
@@ -45,7 +45,7 @@ class LaunchListViewModelTests: XCTestCase {
     
     func testFiltering() {
         let successTestExpectation = expectation(description: "Successful Response Test Expectation")
-        mockedLaunchesNetworkService = LaunchesServiceMock(fileName: "launches-response")
+        mockedLaunchesNetworkService = NetworkServiceMock(fileName: "launches-response")
         launchesViewModel = LaunchesListViewModel(networkService: mockedLaunchesNetworkService)
         let successFilter = Filter(filterType: .success, filterTitle: "Test Filter")
         var mixedFilters = [Filter(filterType: .years, filterTitle: "2018"), Filter(filterType: .years, filterTitle: "2006")]

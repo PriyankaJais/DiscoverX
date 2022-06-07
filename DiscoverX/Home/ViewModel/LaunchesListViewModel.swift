@@ -12,7 +12,7 @@ class LaunchesListViewModel {
     var showlaunches: Launches?
     var sortedByDescendingOrder = false
     
-    private let networkService: LaunchesNetworkServiceProtocol
+    private let networkService: NetworkServiceProtocol
     private var allLaunches: Launches? {
         didSet {
             showlaunches = allLaunches
@@ -20,12 +20,12 @@ class LaunchesListViewModel {
         }
     }
     
-    init(networkService: LaunchesNetworkServiceProtocol = LaunchesNetworkService()) {
+    init(networkService: NetworkServiceProtocol = NetworkService()) {
         self.networkService = networkService
     }
     
     func getLaunches(completion: @escaping ((Bool) -> Void)) {
-        networkService.fetchLaunches { [weak self] result in
+        networkService.fetchData(url: APIEndpoints.launches().url) { [weak self] (result : Result<Launches, ErrorResult>) in
             switch result {
             case .success(let launches) :
                 self?.allLaunches = launches
