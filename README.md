@@ -19,7 +19,7 @@ The launch list has a context menu for navigating to the article, wikipedia link
 Screenshots:
 
 
-<img width="546" alt="Screenshot 2022-05-16 at 15 26 43" src="https://user-images.githubusercontent.com/12966130/168615908-5d437dbe-189e-4ff6-a8f7-82a1851be614.png">
-<img width="546" alt="Screenshot 2022-05-16 at 15 26 49" src="https://user-images.githubusercontent.com/12966130/168615947-7546a176-5f5b-4eeb-a4f1-82f9498de7bb.png">
-<img width="546" alt="Screenshot 2022-05-16 at 15 27 02" src="https://user-images.githubusercontent.com/12966130/168615966-99c1cea7-c5e7-4774-bde7-f36f28459f6a.png">
-<img width="546" alt="Screenshot 2022-05-16 at 15 27 13" src="https://user-images.githubusercontent.com/12966130/168615991-2f2db660-37c3-47d9-a48b-9e9dd885c6b7.png">
+<img width="552" alt="Screenshot 2022-06-07 at 10 56 03" src="https://user-images.githubusercontent.com/12966130/172352412-314350f4-852b-46fc-aa4b-a3b1aeed6d23.png">
+<img width="552" alt="Screenshot 2022-06-07 at 10 55 12" src="https://user-images.githubusercontent.com/12966130/172352432-0856da0a-6d9b-4dd6-9462-98207fa5b3a1.png">
+<img width="552" alt="Screenshot 2022-06-07 at 10 55 30" src="https://user-images.githubusercontent.com/12966130/172352454-c189a3f9-8d91-44e7-9350-cff391e27d83.png">
+<img width="552" alt="Screenshot 2022-06-07 at 10 56 09" src="https://user-images.githubusercontent.com/12966130/172352465-eb7ef23f-a085-4de6-81e5-4151f4cee11b.png">
