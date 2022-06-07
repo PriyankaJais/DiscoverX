@@ -41,7 +41,7 @@ struct LaunchFiltersViewModel {
         var filtersArray: [Filter] = []
         let successFilter = Filter(filterType: .success, filterTitle: Translations.showOnlySuccessfulLaunches)
         let sortOrderFilter = Filter(filterType: .sortOrder, filterTitle: String(sortOrder.title))
-        let sortedYears = years.sorted().reversed()
+        let sortedYears = years.sorted(by: >)
         let yearFilters = sortedYears.map{
             Filter(filterType: .years, filterTitle: String($0))
         }
