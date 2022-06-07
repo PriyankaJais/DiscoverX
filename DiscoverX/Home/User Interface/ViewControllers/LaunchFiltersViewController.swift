@@ -11,6 +11,9 @@ import UIKit
 class LaunchFiltersViewController: UIViewController {
     
     @IBOutlet private weak var clearButton: UIButton?
+    @IBOutlet private weak var applyButton: UIButton?
+    @IBOutlet private weak var closeButton: UIButton?
+
     @IBOutlet private weak var launchFiltersTableView: UITableView?
     var launchFiltersViewModel: LaunchFiltersViewModel?
     var onDismiss: (([Filter], Bool) -> Void)?
@@ -27,6 +30,14 @@ class LaunchFiltersViewController: UIViewController {
         onDismiss?(selectedFilters, clearFilters)
     }
     
+    @IBAction func applyButtonTapped(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     @IBAction func clearButtonTapped(_ sender: Any) {
         selectedFilters.removeAll()
         clearFilters = true
@@ -35,7 +46,8 @@ class LaunchFiltersViewController: UIViewController {
     
     private func setup() {
         launchFiltersTableView?.register(UINib(nibName: LaunchFiltersTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: LaunchFiltersTableViewCell.reuseIdentifier)
-        clearButton?.setAttributedTitle(NSAttributedString(string: Translations.clearFiltersTitle, attributes: [.font: StyleGuide.value.font]), for: .normal)
+        clearButton?.setAttributedTitle(NSAttributedString(string: Translations.clearFiltersTitle.capitalized, attributes: [.font: StyleGuide.title.font]), for: .normal)
+        applyButton?.setAttributedTitle(NSAttributedString(string: Translations.applyFiltersTitle.capitalized, attributes: [.font: StyleGuide.title.font]), for: .normal)
     }
 }
 

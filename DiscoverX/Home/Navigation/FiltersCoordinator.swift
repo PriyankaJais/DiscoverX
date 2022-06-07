@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class FiltersCoordinator: Coordinator {
+struct FiltersCoordinator: Coordinator {
     
     var onDismiss: (([Filter], Bool) -> Void)?
     private var launchesViewModel: LaunchesListViewModel

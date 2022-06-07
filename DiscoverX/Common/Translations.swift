@@ -32,6 +32,7 @@ struct Translations {
     static var openVideoTitle: String { return Translations.value("OpenVideoTitle") }
     static var openWikipediaTitle: String { return Translations.value("OpenWikipediaTitle") }
     static var clearFiltersTitle: String { return Translations.value("ClearFiltersTitle") }
+    static var applyFiltersTitle: String { return Translations.value("ApplyFiltersTitle")}
 }
 
 extension Translations {
